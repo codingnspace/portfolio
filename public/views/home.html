@@ -1,0 +1,33 @@
+	<div layout >
+		<div flex-offset="5" flex="40">
+			<div ng-controller="CarouselController as vm">
+  			<div style="height: 305px">
+			    <uib-carousel interval="vm.myInterval" no-wrap="vm.noWrapSlides">
+			      <uib-slide ng-repeat="slide in vm.slides" active="slide.active">
+			        <img ng-src="{{slide.image}}" style="margin:auto;">
+			        <div class="carousel-caption">
+			          <h4>{{slide.title}}</h4>
+			          <p>{{slide.text}}</p>
+			        </div>
+			      </uib-slide>
+			    </uib-carousel>
+		  	</div>
+			</div>
+		</div>
+
+		<div flex-offset="5" flex>
+			<h2>Pearl McPhee</h2>
+			<h3>Prefect’s bathroom Trelawney veela squashy armchairs, SPEW: Gamp’s Elemental Law of Transfiguration. Magic Nagini bezoar, Hippogriffs Headless Hunt giant squid petrified. Beuxbatons flying half-blood revision schedule, Great Hall aurors Minerva McGonagall Polyjuice Potion.
+				Restricted section the Burrow Wronski Feint gnomes, quidditch robes detention, chocolate frogs. Errol parchment knickerbocker glory A</h3>
+		</div>
+	</div>
+
+	<div layout="row">
+		<div >
+			<md-button>View Projects</md-button>
+		</div>
+	</div>
+
+	<hr>
+
+	<div controlller 
