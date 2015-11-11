@@ -30,4 +30,31 @@
 
 	<hr>
 
-	<div controlller 
+<div ng-controller= "ProjectController as vm">
+			<div ng-repeat="p in vm.projects">
+				<md-content class="md-padding">
+			    <md-card>
+			      <img ng-src="{{p.pic}}" class="md-card-image" alt="{{p.title}}">
+			      <md-card-content>
+			        <h2 class="md-title">{{p.title}}</h2>
+			        <p>
+			        	{{p.body}}
+			        </p>
+							<h3>Tech Used</h3>
+								<h4>Front End</h4>
+									<ul>
+										<li></li>
+									</ul>
+								<h4>Back End</h4>
+									<ul>
+										<li></li>
+									</ul>
+			      </md-card-content>
+			      <md-card-actions layout="row" layout-align="end center">
+			        <md-button href="{{p.demo}}">View Site</md-button>
+			        <md-button href="{{p.github}}">Github</md-button>
+			      </md-card-actions>
+			    </md-card>
+				</md-content>
+			</div>
+</div>

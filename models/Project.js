@@ -8,7 +8,10 @@ var ProjectSchema = new mongoose.Schema({
   comments: Array,
   author: String,
   pic: String,
-  tech: String,
+  tech:{
+    front: Array,
+    back: Array,
+  },
   github: String,
   demo: String,
 });

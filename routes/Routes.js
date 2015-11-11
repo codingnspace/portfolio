@@ -20,4 +20,10 @@ router.post('/project/create', function(req,res,next){
   })
 });
 
+router.get('/project/get', function(req,res,next){
+	Project.find({}, function(err,result){
+		if(err) return next(err);
+		res.send(result);
+	})
+})
 module.exports = router;
