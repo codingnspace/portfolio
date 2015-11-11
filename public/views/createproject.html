@@ -1,0 +1,32 @@
+<div ng-controller="ProjectController as vm">
+  <div layout>
+    <form ng-submit="vm.createProject()" flex>
+        <div>
+         <md-input-container >
+            <label> Title</label>
+            <input required ng-model="vm.nproject.title"></input>
+          </md-input-container>
+          <md-input-container >
+            <label>Body </label>
+            <textarea ng-model="vm.nproject.body"></textarea>
+          </md-input-container>
+          <md-input-container layout-padding>
+              <label>Github Url</label>
+              <input  ng-model="vm.nproject.github"></input>
+          </md-input-container>
+          <md-input-container layout-padding>
+              <label>Demo Url</label>
+              <input  ng-model="vm.nproject.demo"></input>
+          </md-input-container>
+          <md-input-container layout-padding>
+              <label> Pic Url</label>
+              <input  ng-model="vm.nproject.pic"></input>
+          </md-input-container>
+              <div layout="row" style="padding-top:50px">
+              <md-button type="submit" class="md-raised">Save</md-button>
+              <md-button type="button" class="md-raised" ui-sref="Home"> Cancel</md-button>
+            </div>
+        </div>
+      </form>
+    </div>
+</div>

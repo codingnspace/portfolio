@@ -6,6 +6,9 @@
 		$stateProvider.state('Home',{
 			url: '/',
 			templateUrl: 'views/home.html'
+		}).state('CreateProject',{
+			url: '/createproject',
+			templateUrl: 'views/createproject.html'
 		});
 		$urlRouterProvider.otherwise('/');
 	}
