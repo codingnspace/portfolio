@@ -31,6 +31,7 @@
 	<hr>
 
 <div ng-controller= "ProjectController as vm">
+	<div class="sect-title" style="text-align:center;"><h2>Projects</h2></div>
 			<div ng-repeat="p in vm.projects">
 				<md-content class="md-padding">
 			    <md-card>
@@ -51,10 +52,22 @@
 									</ul>
 			      </md-card-content>
 			      <md-card-actions layout="row" layout-align="end center">
-			        <md-button href="{{p.demo}}">View Site</md-button>
-			        <md-button href="{{p.github}}">Github</md-button>
+			        <md-button ng-href="{{p.demo}}">View Site</md-button>
+			        <md-button ng-href="{{p.github}}">Github</md-button>
 			      </md-card-actions>
 			    </md-card>
 				</md-content>
 			</div>
+			<!-- <note>This website was made by me using x and is on github</note> -->
+</div>
+
+<div ng-controller="BlogController as vm">
+	<div class="sect-title" style="text-align:center;"><h2>Latest From Blog</h2></div>
+		<div ng-repeat = "b in vm.posts">
+			<a ui-sref="Post({id: b._id})"><h3>{{b.title}}</h3></a>
+			<p>
+				{{b.body | limitTo: 100}}...
+			</p>
+				Posted In:	<a ng-href="http://localhost:8080/blog/tagged/{{t}}"<div ng-repeat="t in b.tags"> {{t}},</div></a>
+		</div>
 </div>

@@ -9,6 +9,12 @@
 		}).state('CreateProject',{
 			url: '/createproject',
 			templateUrl: 'views/createproject.html'
+		}).state('CreatePost',{
+			url: '/createpost',
+			templateUrl: 'views/createpost.html'
+		}).state('Post',{
+			url: '/post/:id',
+			templateUrl: 'views/post.html'
 		});
 		$urlRouterProvider.otherwise('/');
 	}

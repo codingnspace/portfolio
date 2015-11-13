@@ -17,12 +17,35 @@ router.post('/project/create', function(req,res,next){
   project.save(function(err,result){
     if (err) return next(err);
     res.send();
-  })
+  });
 });
 
 router.get('/project/get', function(req,res,next){
 	Project.find({}, function(err,result){
 		if(err) return next(err);
+		res.send(result);
+	});
+});
+
+router.post('/blog/create', function(req,res,next){
+	var blog = new Blog(req.body);
+	blog.save(function(err,result){
+		if(err) return next (err);
+		res.send(result);
+	})
+})
+
+router.get('/blog/post', function(req,res,next){
+	Blog.find({}, function(err,result){
+		if(err) return next (err);
+		res.send(result);
+	});
+});
+
+
+router.get('/blog/post/:id', function(req,res,next){
+	Blog.findOne({_id: req.params.id}, function(err,result){
+		if (err) return next(err);
 		res.send(result);
 	})
 })
